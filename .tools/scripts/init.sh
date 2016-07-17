@@ -123,6 +123,11 @@ function make_server {
         cat config.log
         exit $err
     fi
+    echo COMMON
+    cat src/common/Makefile
+    echo MAP
+    cat src/map/Makefile
+    exit 0
     echo "make -j2"
     make -j2
     check_error $?
